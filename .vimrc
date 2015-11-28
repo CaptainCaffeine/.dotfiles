@@ -4,7 +4,6 @@ Plug 'hdima/python-syntax'
 Plug 'nanotech/jellybeans.vim'
 Plug 'lervag/vimtex'
 Plug 'bling/vim-airline'
-Plug 'bling/vim-bufferline'
 
 call plug#end()
 
@@ -23,12 +22,20 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
+" keep tabs as 8 space tabs
+" set shiftwidth=8
+" set tabstop=8
+" set softtabstop=8
+" set noexpandtab
 set shiftround
 set autoindent
 " mark with $ instead of deleting the text when using the change commmand
 set cpoptions+=$
 " enable statusline
 set laststatus=2
+" fix slow exit of Insert mode
+set ttimeoutlen=50
+set timeoutlen=1000
 " get rid of all bells
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
