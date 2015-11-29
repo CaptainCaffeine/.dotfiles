@@ -55,3 +55,6 @@ noremap <leader>w :w<CR>
 noremap <leader>q :q<CR>
 noremap <leader>Q :q!<CR>
 noremap <leader>x :x<CR>
+
+" make it easier to go to the start of the current line's text
+noremap <leader>0 ^
