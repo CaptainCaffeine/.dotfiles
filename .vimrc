@@ -15,8 +15,12 @@ let python_highlight_indent_errors = 0
 let python_highlight_space_errors = 0
 let g:vimtex_quickfix_open_on_warning=0
 let g:vimtex_fold_envs=0
+" set okular as the pdf viewer for vimtex
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+" enable powerline symbols in vim-airline
 let g:airline_powerline_fonts=1
-let g:airline#extensions#bufferline#enabled=1
 " turn tabs into 4 spaces
 set shiftwidth=4
 set tabstop=4

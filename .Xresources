@@ -50,5 +50,10 @@ URxvt.letterSpace: -2
 URxvt.lineSpace: -1
 ! disable beep
 URxvt.visualBell: false
+! increase number of scrollback lines
+URxvt.saveLines: 2000
+! get rid of external border and add small internal border
+URxvt.internalBorder: 1
+URxvt.externalBorder: 0
 
 ! }
