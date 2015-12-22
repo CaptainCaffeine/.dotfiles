@@ -1,0 +1,58 @@
+! Xft settings {
+Xft.dpi: 100
+Xft.autohint: false
+Xft.lcdfilter: lcddefault
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintingstyle: hintslight
+! }
+
+!URxvt settings {
+
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+URxvt.scrollstyle: plain
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: false
+URxvt*scrollColor: #676b78
+! colour depth
+Urxvt.depth: 32
+! background color
+URxvt*background: #121212
+! foreground color
+URxvt*foreground: #61ABF9
+! rest of the palette
+URxvt*color0: #093C4A
+URxvt*color1: #58D2ED
+URxvt*color2: #859900
+URxvt*color3: #B58900
+URxvt*color4: #268BD2
+URxvt*color5: #D33682
+URxvt*color6: #2AA198
+URxvt*color7: #EEE8D5
+URxvt*color8: #00313E
+URxvt*color9: #27D7CE
+URxvt*color10: #586E75
+URxvt*color11: #657B83
+URxvt*color12: #839496
+URxvt*color13: #6C71C4
+URxvt*color14: #B4F5F5
+URxvt*color15: #FDF6E3
+! font
+URxvt*font: xft:DejaVu Sans Mono:style=book:size=11,xft:DejaVu Sans Mono for Powerline:style=book:size=11,xft:PowerlineSymbols:size=11
+URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:size=11,xft:PowerlineSymbols:size=11
+URxvt*intensityStyles: true
+! icon
+URxvt.iconFile: /usr/share/icons/Numix-Circle/48x48/apps/terminal.svg
+! font spacing, -1 decreases by one pixel
+URxvt.letterSpace: -2
+! vertical spacing
+! URxvt.lineSpace: -1
+! disable beep
+URxvt.visualBell: false
+! increase number of scrollback lines
+URxvt.saveLines: 2000
+! get rid of external border and add small internal border
+URxvt.internalBorder: 1
+URxvt.externalBorder: 0
+! }
