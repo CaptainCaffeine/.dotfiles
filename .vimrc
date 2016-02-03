@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugins')
 Plug 'hdima/python-syntax'
 Plug 'nanotech/jellybeans.vim'
 Plug 'lervag/vimtex'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -21,6 +22,7 @@ let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 " enable powerline symbols in vim-airline
 let g:airline_powerline_fonts=1
+let g:airline#extensions#whitespace#checks = []
 " turn tabs into 4 spaces
 set shiftwidth=4
 set tabstop=4
