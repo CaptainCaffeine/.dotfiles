@@ -21,6 +21,7 @@ let g:vimtex_fold_envs = 0
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
+" turn on powerline fonts
 let g:airline_powerline_fonts = 1
 " turn off whitespace checks in vim-airline
 let g:airline#extensions#whitespace#checks = []

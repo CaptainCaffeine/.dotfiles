@@ -8,13 +8,14 @@ Xft.hinting: true
 Xft.hintingstyle: hintslight
 ! }
 
-!URxvt settings {
+! URxvt settings {
 
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
-URxvt.scrollstyle: plain
-URxvt.scrollBar_right: true
-URxvt.scrollBar_floating: false
-URxvt*scrollColor: #676b78
+URxvt.scrollBar: false
+! URxvt.scrollstyle: plain
+! URxvt.scrollBar_right: true
+! URxvt.scrollBar_floating: true
+! URxvt*scrollColor: #676b78
 ! colour depth
 Urxvt.depth: 32
 ! background color
@@ -40,7 +41,7 @@ URxvt*color14: #B4F5F5
 URxvt*color15: #FDF6E3
 ! font
 URxvt*font: xft:DejaVu Sans Mono:style=book:size=12,xft:DejaVu Sans Mono for Powerline:style=book:size=12,xft:PowerlineSymbols:size=12
-URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:size=12,xft:PowerlineSymbols:size=12
+URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:size=12,xft:DejaVu Sans Mono for Powerline:style=bold:size=12,xft:PowerlineSymbols:size=12
 URxvt*intensityStyles: true
 ! icon
 URxvt.iconFile: /usr/share/icons/Numix-Circle/48x48/apps/terminal.svg
@@ -50,8 +51,8 @@ URxvt.letterSpace: -2
 URxvt.lineSpace: -1
 ! disable beep
 URxvt.visualBell: false
-! increase number of scrollback lines
-URxvt.saveLines: 2000
+! number of scrollback lines
+URxvt.saveLines: 4096
 ! get rid of external border and add small internal border
 URxvt.internalBorder: 1
 URxvt.externalBorder: 0
