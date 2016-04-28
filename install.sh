@@ -4,8 +4,10 @@
 rm ~/.bash_aliases
 rm ~/.vimrc
 rm ~/.Xresources
+rm ~/.inputrc
 
 ln -sv ~/.dotfiles/.bash_aliases ~
+ln -sv ~/.dotfiles/.inputrc ~
 
 #if this is on my laptop, use the alternate dotfiles
 if [ "$(hostname)" == "FuGuiZhu" ]; then

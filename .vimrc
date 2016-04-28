@@ -31,9 +31,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_check_header = 1
 let g:syntastic_enable_signs = 0
-" Disable syntastic for .tex files
-let g:syntastic_disabled_filetypes=['tex']
 " turn tabs into 4 spaces
 set shiftwidth=4
 set tabstop=4
