@@ -6,6 +6,7 @@ Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
