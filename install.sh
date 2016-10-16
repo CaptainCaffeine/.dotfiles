@@ -1,22 +1,25 @@
 #!/bin/sh
 
-#delete old symbolic links/default dotfiles
+# Delete old symbolic links/default dotfiles
+rm ~/.bashrc
 rm ~/.bash_aliases
-rm ~/.vimrc
-rm ~/.Xresources
 rm ~/.inputrc
+rm ~/.vimrc
 
+rm ~/.config/konsolerc
+
+rm ~/.local/share/konsole/Jellybeans.colorscheme
+rm ~/.local/share/konsole/matt.profile
+
+# Link the dotfiles in this repo
+ln -sv ~/.dotfiles/.bashrc ~
 ln -sv ~/.dotfiles/.bash_aliases ~
 ln -sv ~/.dotfiles/.inputrc ~
+ln -sv ~/.dotfiles/.vimrc ~
 
-#if this is on my laptop, use the alternate dotfiles
-if [ "$(hostname)" == "FuGuiZhu" ]; then
-    ln -sv ~/.dotfiles/.vimrc_laptop ~/.vimrc
-    ln -sv ~/.dotfiles/.Xresources_laptop ~/.Xresources
-else
-    ln -sv ~/.dotfiles/.vimrc ~
-    ln -sv ~/.dotfiles/.Xresources ~
-fi
+ln -sv ~/.dotfiles/.config/konsolerc ~/.config/
 
-#update X11 database
-xrdb ~/.Xresources
+ln -sv ~/.dotfiles/.local/share/konsole/Jellybeans.colorscheme ~/.local/share/konsole/
+ln -sv ~/.dotfiles/.local/share/konsole/matt.profile ~/.local/share/konsole/
+
+# Firefox userContent.css can't be linked from the script, as the default directory id is different for each system

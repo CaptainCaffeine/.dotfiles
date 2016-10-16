@@ -1,5 +1,8 @@
 set editing-mode vi
-#set show-mode-in-prompt on
+
 set keymap vi-command
 #stop "v" from opening editor.
 "v": ""
+
+set keymap vi-insert
+TAB: menu-complete
