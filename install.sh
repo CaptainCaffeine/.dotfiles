@@ -3,6 +3,7 @@
 # Delete old symbolic links/default dotfiles
 rm ~/.bashrc
 rm ~/.bash_aliases
+rm ~/.haskeline
 rm ~/.inputrc
 rm ~/.vimrc
 
@@ -14,6 +15,7 @@ rm ~/.local/share/konsole/matt.profile
 # Link the dotfiles in this repo
 ln -sv ~/.dotfiles/.bashrc ~
 ln -sv ~/.dotfiles/.bash_aliases ~
+ln -sv ~/.dotfiles/.haskeline ~
 ln -sv ~/.dotfiles/.inputrc ~
 ln -sv ~/.dotfiles/.vimrc ~
 
