@@ -24,3 +24,6 @@ PS1='\[\033[0;44;1;44m\]\u@\h\[\033[00m\]:\w\$ '
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++

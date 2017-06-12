@@ -6,6 +6,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tikhomirov/vim-glsl'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -15,7 +17,7 @@ let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_fold_envs = 0
 " set okular as the pdf viewer for vimtex
 let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 " Vim-airline settings
 let g:airline_powerline_fonts = 1
@@ -24,11 +26,14 @@ let g:airline#extensions#whitespace#checks = []
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_quiet_messages = {'regex': 'pragma once in main file'}
+" Ctrlp settings
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_custom_ignore = '\v/(\.git|build)$'
 " turn tabs into 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -40,9 +45,6 @@ set autoindent
 set cpoptions+=$
 " enable statusline
 set laststatus=2
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 " fix slow exit of Insert mode
 set ttimeoutlen=50
 set timeoutlen=1000
@@ -51,6 +53,10 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 " disable default mode indicator on the command line
 set noshowmode
+" search up the directory structure until we find the tags file
+set tags=./tags;/,./\.git/tags;/
+" automatically equalize window sizes after a resize event
+autocmd VimResized * wincmd =
 
 let maplocalleader = ","
 let mapleader = " "
@@ -73,3 +79,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" easier ctags
+nnoremap <leader>] <C-]>
+nnoremap <leader>[ <C-T>
