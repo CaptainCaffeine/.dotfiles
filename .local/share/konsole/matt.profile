@@ -17,3 +17,6 @@ MouseWheelZoomEnabled=false
 [Scrolling]
 HistorySize=4096
 ScrollBarPosition=2
+
+[Terminal Features]
+FlowControlEnabled=false

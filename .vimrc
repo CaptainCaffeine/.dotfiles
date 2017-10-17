@@ -8,6 +8,7 @@ Plug 'scrooloose/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tikhomirov/vim-glsl'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -34,6 +35,8 @@ let g:syntastic_quiet_messages = {'regex': 'pragma once in main file'}
 " Ctrlp settings
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_custom_ignore = '\v/(\.git|build)$'
+let g:ctrlp_user_command = 'rg --files %s'
+let g:ctrlp_use_caching = 0
 " turn tabs into 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -55,6 +58,8 @@ autocmd GUIEnter * set visualbell t_vb=
 set noshowmode
 " search up the directory structure until we find the tags file
 set tags=./tags;/,./\.git/tags;/
+" set :grep to use ripgrep
+set grepprg=rg\ --vimgrep
 " automatically equalize window sizes after a resize event
 autocmd VimResized * wincmd =
 
