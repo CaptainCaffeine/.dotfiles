@@ -15,7 +15,6 @@ call plug#end()
 colorscheme jellybeans
 
 let g:vimtex_quickfix_open_on_warning = 0
-let g:vimtex_fold_envs = 0
 " set okular as the pdf viewer for vimtex
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
@@ -32,10 +31,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_enable_signs = 0
 let g:syntastic_quiet_messages = {'regex': 'pragma once in main file'}
+let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
 " Ctrlp settings
 let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\v/(\.git|build)$'
-let g:ctrlp_user_command = 'rg --files %s'
+let g:ctrlp_custom_ignore = '\v/(\.git|build|externals)$'
+let g:ctrlp_user_command = 'rg --glob !externals/ --files %s'
 let g:ctrlp_use_caching = 0
 " turn tabs into 4 spaces
 set shiftwidth=4

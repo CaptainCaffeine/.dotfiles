@@ -4,6 +4,9 @@ DefaultProfile=matt.profile
 [Favorite Profiles]
 Favorites=
 
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/.config/konsole.css,file:$HOME/.config/konsole.css
+
 [KonsoleWindow]
 SaveGeometryOnExit=false
 ShowAppNameOnTitleBar=false
@@ -12,8 +15,11 @@ ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAQcAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA8AAAAQbAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 
 [TabBar]
-TabBarVisibility=AlwaysHideTabBar
+TabBarPosition=Top
+TabBarUseUserStyleSheet=true
+TabBarUserStyleSheetFile=file:///home/matt/.config/konsole.css
+TabBarVisibility=ShowTabBarWhenNeeded

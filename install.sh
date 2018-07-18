@@ -3,11 +3,11 @@
 # Delete old symbolic links/default dotfiles
 rm ~/.bashrc
 rm ~/.bash_aliases
-rm ~/.haskeline
 rm ~/.inputrc
 rm ~/.vimrc
 
 rm ~/.config/konsolerc
+rm ~/.config/konsole.css
 
 rm ~/.local/share/konsole/Jellybeans.colorscheme
 rm ~/.local/share/konsole/matt.profile
@@ -20,6 +20,7 @@ ln -sv ~/.dotfiles/.inputrc ~
 ln -sv ~/.dotfiles/.vimrc ~
 
 ln -sv ~/.dotfiles/.config/konsolerc ~/.config/
+ln -sv ~/.dotfiles/.config/konsole.css ~/.config/
 
 ln -sv ~/.dotfiles/.local/share/konsole/Jellybeans.colorscheme ~/.local/share/konsole/
 ln -sv ~/.dotfiles/.local/share/konsole/matt.profile ~/.local/share/konsole/

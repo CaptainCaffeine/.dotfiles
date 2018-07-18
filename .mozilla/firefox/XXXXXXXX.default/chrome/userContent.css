@@ -1,4 +1,4 @@
-input:not(.urlbar-input):not(.textbox-input):not(.form-control):not([type='checkbox']) {
+input:not(.urlbar-input):not(.textbox-input):not(.form-control):not([type='checkbox']):not([type='radio']) {
     -moz-appearance: none !important;
     background-color: white;
     color: black;
@@ -21,4 +21,3 @@ select {
 }
 
 @-moz-document url-prefix(about:blank) {*{background-color:#121212;}}
-@-moz-document url-prefix(about:newtab) {*{background-color:#121212;}}

@@ -7,6 +7,7 @@ UseFontLineChararacters=true
 
 [General]
 Environment=TERM=xterm-256color
+LocalTabTitleFormat=%D : %n
 Name=matt
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
