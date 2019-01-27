@@ -34,7 +34,6 @@ let g:syntastic_quiet_messages = {'regex': 'pragma once in main file'}
 let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
 " Ctrlp settings
 let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\v/(\.git|build|externals)$'
 let g:ctrlp_user_command = 'rg --glob !externals/ --files %s'
 let g:ctrlp_use_caching = 0
 " turn tabs into 4 spaces
@@ -62,6 +61,13 @@ set tags=./tags;/,./\.git/tags;/
 set grepprg=rg\ --vimgrep
 " automatically equalize window sizes after a resize event
 autocmd VimResized * wincmd =
+
+" change the cursor shape to a beam in insert mode and a block in normal mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+" reset the cursor shape when entering Vim. The redraw! is to clear the
+" escape sequence from the statusline.
+autocmd VimEnter * silent execute "!echo -ne \"\e[2 q\"" | redraw!
 
 let maplocalleader = ","
 let mapleader = " "
