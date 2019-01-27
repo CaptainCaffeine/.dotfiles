@@ -1,8 +1,19 @@
+set completion-ignore-case on
+
+# Reduce timeout when pressing ESC from 500ms to 50ms.
+set keyseq-timeout 50
+
 set editing-mode vi
+set show-mode-in-prompt on
+
+# Change the cursor to a beam in insert mode and a block in normal mode.
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
 
 set keymap vi-command
-#stop "v" from opening editor.
+# Stop "v" from opening editor.
 "v": ""
 
 set keymap vi-insert
 TAB: menu-complete
+"\e[Z": menu-complete-backward
